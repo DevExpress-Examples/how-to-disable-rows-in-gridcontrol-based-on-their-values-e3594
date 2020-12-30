@@ -5,11 +5,13 @@
 * [MainWindow.xaml.cs](./CS/WpfApplication/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/WpfApplication/MainWindow.xaml.vb))
 * [ViewModel.cs](./CS/WpfApplication/ViewModel.cs) (VB: [ViewModel.vb](./VB/WpfApplication/ViewModel.vb))
 <!-- default file list end -->
+
 # How to disable rows in GridControl based on their values
 
+To disable a row, use either of the following ways:
 
-<p>To disable a row, use either of the following approaches: <br>1. Handle the <a href="http://documentation.devexpress.com/#WPF/DevExpressXpfGridGridViewBase_ShowingEditortopic">ShowingEditor </a> event and set the <strong>e.Cancel</strong> property to true in the event handler.<br>2. Bind the editor's <strong>IsReadOnly</strong> property inside <strong>CellTemplate</strong> (supported starting with version <strong>15.2</strong>).<br><br>Both these approaches are demonstrated in the underlying sample project. </p>
+1. In **v20.1** and newer, use [BaseColumn.IsReadOnlyBinding](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.BaseColumn.IsReadOnlyBinding) or [BaseColumn.IsEnabledBinding](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.BaseColumn.IsEnabledBinding) as we illustrated in this example: [Read-Only and Enabled State Binding](https://github.com/DevExpress-Examples/wpf-grid-read-only-and-enabled-binding).
+2. Handle the [ShowingEditor](http://documentation.devexpress.com/#WPF/DevExpressXpfGridGridViewBase_ShowingEditortopic) event and set the **e.Cancel** property to `True` in the event handler.
+3. Bind the editor's **IsReadOnly** property inside **CellTemplate** (supported starting with version **15.2**).
 
-<br/>
-
-
+The solutions from points 2 and 3 are demonstrated in this sample project.
