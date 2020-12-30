@@ -15,3 +15,7 @@ To disable a row, use either of the following ways:
 3. Bind the editor's **IsReadOnly** property inside **CellTemplate** (supported starting with version **15.2**).
 
 The solutions from points 2 and 3 are demonstrated in this sample project.
+
+---
+
+Note that the GridItem class is a POCO object and data items are generated with the help of `ViewModelSource`. For more information, please refer to this help topic: [POCO ViewModels](https://docs.devexpress.com/WPF/17352/mvvm-framework/viewmodels/poco-viewmodels).
